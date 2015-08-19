@@ -62,7 +62,7 @@ def cal_hidden_layer(a_s,delta,matrixs):
 	for ii in range(len(matrixs)-1,0,-1):
 		#set_trace()
 		#print delta_i , matrixs[ii]
-		delta_i=np.dot((matrixs[ii].T),delta_i)
+		delta_i=np.dot((matrixs[ii].T),[delta_i])
 
 		delta_i=delta_i*(a_s[ii]*(1-a_s[ii]))
 		result.insert(0,delta_i)
@@ -72,8 +72,8 @@ def update_wb(w,bb,alpha,delta_s,a_s):
 	#w=np.array(ww,dtype='float64')
 	for ii in range(len(w)):
 		#set_trace()
-		print w[ii],delta_s[ii],a_s[ii]
-		w[ii]=w[ii]-alpha*np.dot(delta_s[ii].T,a_s[ii])
+		print w[ii],delta_s[ii],a_s[ii+1]
+		w[ii]=w[ii]-alpha*np.dot([delta_s[ii]],np.array([a_s[ii+1]]).T)
 		bb[ii]=bb[ii]-alpha*delta_s[ii]
 
 
