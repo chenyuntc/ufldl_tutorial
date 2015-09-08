@@ -1,4 +1,9 @@
 #coding:utf8
+'''
+@auther : chenyun
+@time: 2015/09/08
+@refer http://ufldl.stanford.edu/wiki/index.php/%E6%A2%AF%E5%BA%A6%E6%A3%80%E9%AA%8C%E4%B8%8E%E9%AB%98%E7%BA%A7%E4%BC%98%E5%8C%96
+'''
 import numpy as np
 from numpy import array,random,dot,transpose
 from scipy import optimize as opt
